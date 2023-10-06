@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package example.v1;
+
+option java_multiple_files = true;
+option java_outer_classname = "ExampleProto";
+option java_package = "example.v1";
+
+service AdsApi {
+  rpc ExampleRpc(ExampleRequest) returns (ExampleResponse);
+}
+
+message ExampleRequest {
+  string blahblah = 1;
+}
+
+message ExampleResponse {
+  string blahblah = 1;
+}
+
